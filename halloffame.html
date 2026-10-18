@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HALL OF FAME</title>
+  <link rel="icon" type="image/x-icon" href="images/liverpoolprofile-modified.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      color: #fee38b;
+    }
+
+    header {
+      padding: 40px;
+      text-align: center;
+      font-size: 3em;
+      text-shadow: 14px 14px 14px black, 0px 0px 3px gold, 0px 0px 3px gold;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #222;
+      padding: 10px;
+      text-align: center;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #741111;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .dropdown {
+      position: relative;
+      width: 220px;
+      margin: 20px;
+    }
+
+    .dropdown img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 1px;
+  border: 10px solid transparent;
+  transition: width 1s, height 1s;
+  animation: glow 2s linear 1s infinite normal both;
+}
+
+@keyframes glow {
+    0% {
+    box-shadow: 0 0 10px 7px  gold;
+  }
+  25%{
+    box-shadow: 0  0 15px 5px #741111;
+  }
+  50% {
+    box-shadow: 0 10px 20px 5x gold;
+  }
+  100% {
+    box-shadow: 0 0 10px 10px gold;
+  }
+}
+
+.dropdown-content img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+      
+}
+.dropdown img:hover {
+  background: linear-gradient(60deg, gold, black);
+  border: 9px solid transparent ;
+  animation: borders 3s ease-out infinite;
+}
+@keyframes borders {
+  0%   { border-color: gold;}
+  25%  {border-color: #741111;}
+  50%  { border-color: gold;}
+  75%  {border-color:gold;}
+  100% { border-color: gold; }
+}
+        
+.dropdown img:hover{
+    height: 300px;
+    width: 120%;
+}
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #741111;
+      padding: 15px;
+      top: 100%;
+      left: 0;
+      width: 240px;
+      z-index: 1;
+      color: white;
+      border: 1px solid #999;
+      border-radius: 10px;
+      
+
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      
+    }
+    @media (max-width: 768px) {
+      header {
+        font-size: 2em;
+        padding: 30px 10px;
+      }
+
+      nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+      .gallery-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dropdown {
+        width: 90%;
+        max-width: 300px;
+      }
+
+      .dropdown img:hover {
+        transform: scale(1.03);
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        font-size: 1.5em;
+        padding: 20px 5px;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 6px 8px;
+      }
+
+      .dropdown-content {
+        font-size: 14px;
+      }
+    }
+
+    footer {
+      background-color: #222;
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+      color: #aaa;
+    }
+    
+    img{
+      align-items: center;
+      height: 400px;
+      width: 400px;
+    }
+    .header-image-container {
+  text-align: center;
+  background-color: #000000; 
+  padding: 20px 0;
+}
+
+.header-image-container img {
+  width: 500px;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(20%) contrast(200%) brightness(90%);
+  border-radius: 12px;
+  /* box-shadow: 0 0 25px 10px gold, 0 0 8px 2px #741111; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px 15px  #C89B3C;
+}
+
+  </style>
+</head>
+<body>
+  <div class="header-image-container">
+  <img src="images/liverpoolgoldcard.jpg" alt="The LIVERPOOL">
+</div>
+
+  <header>HALL OF FAME</header>
+
+  
+
+  <section >
+    <h2>Founding Era (1892–1954)</h2>
+    <div class="gallery-container">
+      <div class="dropdown">
+        <img src="images/johnhoulding.jpg" alt="John Houlding">
+        <div class="dropdown-content">
+          <strong>John Houlding</strong><br>The founder of Liverpool FC in 1892.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/ElishaScott1.jpg" alt="Elisha Scott">
+        <div class="dropdown-content">
+          <strong>Elisha Scott</strong><br>Legendary goalkeeper who served 22 years.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/liddell.webp" alt="Billy Liddell">
+        <div class="dropdown-content">
+          <strong>Billy Liddell</strong><br>Iconic winger, the club was nicknamed 'Liddellpool'.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section >
+    <h2>Shankly Era (1959–1974)</h2>
+    <div class="gallery-container" >
+      <div class="dropdown">
+        <img src="images/billshanklywebp.webp" alt="Bill Shankly">
+        <div class="dropdown-content">
+          <strong>Bill Shankly</strong><br>Architect of modern Liverpool FC.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/ronyeats.jpg" alt="Ron Yeats" >
+        <div class="dropdown-content">
+          <strong>Ron Yeats</strong><br>Commanding centre-back and Shankly's captain.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/ianstjohn.avif" alt="Ian St John">
+        <div class="dropdown-content">
+          <strong>Ian St John</strong><br>Key forward in Liverpool's rise.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/roger-hunt.jpg" alt="roger">
+        <div class="dropdown-content">
+          <strong>Roger Hunt</strong><br>2<sup>nd</sup> highest scorer for liverpool of all time
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/iancallaghan.jpg" alt="Ian St John">
+        <div class="dropdown-content">
+          <strong>Ian Callaghan</strong><br>Recorded most games played ever till now..
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/tommysmith.webp" alt="tommy">
+        <div class="dropdown-content">
+          <strong>Tommy Smith</strong><br>The Defensive barrel
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section >
+    <h2>Paisley & Fagan Era (1974–1985)</h2>
+    <div class="gallery-container">
+      <div class="dropdown">
+        <img src="images/bob-paisley.avif" alt="Bob Paisley">
+        <div class="dropdown-content">
+          <strong>Bob Paisley</strong><br>Won 3 European Cups as manager.The greatest manager for liverpool of all time
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/joefagan.jpeg" alt="Joe Fagan">
+        <div class="dropdown-content">
+          <strong>Joe Fagan</strong><br>He was the first English manager to achieve the treble. 
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/alankennedy.jpg" alt="alan">
+        <div class="dropdown-content">
+          <strong>Alan Kennedy</strong><br>Key forward in Liverpool's rise.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/raykennedy.jpg" alt="Ray Kennedy">
+        <div class="dropdown-content">
+          <strong>Ray Kennedy</strong><br>Versatile and brilliant midfielder.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/emlyn-hughes.webp" alt="hughes">
+        <div class="dropdown-content">
+          <strong>Emlyn Hughes</strong><br>Key forward in Liverpool's rise.665 apps for liverpool
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/graeme-souness.avif" alt="Graeme Souness">
+        <div class="dropdown-content">
+          <strong>Graeme Souness</strong><br>Dominant midfield general.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/john-toshack-.jpg" alt="john shack">
+        <div class="dropdown-content">
+          <strong>John Shack</strong><br>profilic striker and manager.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/raycle.webp" alt="ray clemanene">
+        <div class="dropdown-content">
+          <strong>Ray Clemanene</strong><br>The wall.For 2 decades one of the greatest goalkeeper of all time. 
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section >
+    <h2>Dalglish Player-Manager Era (1985–1991)</h2>
+    <div class="gallery-container">
+      <div class="dropdown">
+        <img src="images/kenny.jpg" alt="Kenny Dalglish">
+        <div class="dropdown-content">
+          <strong>Kenny Dalglish</strong><br>The King of Anfield.Modern map for liverpool
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/john-barnes.webp" alt="john">
+        <div class="dropdown-content">
+          <strong>John Barnes</strong><br>One of if not The greatest english defender of all time.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/ianrush.jpg" alt="Ian Rush">
+        <div class="dropdown-content">
+          <strong>Ian Rush</strong><br>All-time top scorer for liverpool.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/alan-hansen.jpg" alt="Alan Hansen">
+        <div class="dropdown-content">
+          <strong>Alan Hansen</strong><br>Elegant defender and captain.
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+    <div class="gallery-container">
+
+    </div>
+  </section>
+
+  <section id="rafa">
+    <h2>Houllier & Benítez Era (1998–2010)</h2>
+    <div class="gallery-container">
+      <div class="dropdown">
+        <img src="images/rafa.webp" alt="Rafa Benítez">
+        <div class="dropdown-content">
+          <strong>Rafa Benítez</strong><br>2005 Istanbul miracle man.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/houlier.jpeg" alt="houllier">
+        <div class="dropdown-content">
+          <strong>Houllier</strong><br>Houllier won the treble out of nowhere
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/Gerrard.jpg" alt="Steven Gerrard">
+        <div class="dropdown-content">
+          <strong>Steven Gerrard</strong><br>The captain marvel of Istanbul.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/jamiecarra.webp" alt="Jamie Carragher">
+        <div class="dropdown-content">
+          <strong>Jamie Carragher</strong><br>Defensive warrior .One of the greatest player for liverpool
+        </div>
+      </div>
+            <div class="dropdown">
+        <img src="images/robbiefowler.webp" alt="Robbie Fowler">
+        <div class="dropdown-content">
+          <strong>Robbie Fowler</strong><br>‘God’ to the Anfield faithful.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/jamieredknapp.jpg" alt="Jamie Redknapp">
+        <div class="dropdown-content">
+          <strong>Jamie Redknapp</strong><br>Skilled midfielder of the Spice Boys era.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/steve-mcmanaman.webp" alt="steve">
+        <div class="dropdown-content">
+          <strong>Steve Mcmanaman</strong><br>He is one of the most decorated English footballers to have played for a club abroad.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/Gary-McAllister-2001.webp" alt="Gary McAllister">
+        <div class="dropdown-content">
+          <strong>Gary McAllister</strong><br>Veteran inspiration in the early 2000s.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/torres.jpg" alt="Gary McAllister">
+        <div class="dropdown-content">
+          <strong>Ferrnado Torres</strong><br>The Real Deal Number 9
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/luisgarcia.jpg" alt="luis garica">
+        <div class="dropdown-content">
+          <strong>Luis Garcia</strong><br>The magic midfielder
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <img src="images/xabialonso.webp" alt="xabi">
+        <div class="dropdown-content">
+          <strong>Xabi Alonso</strong><br>.Sniper of liverpool
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/suarez-goal.avif" alt="Gary McAllister">
+        <div class="dropdown-content">
+          <strong>luis Suarez</strong><br>The Cheeky Bastard golden boot winner 2009 pl
+        </div>
+      </div><div class="dropdown">
+        <img src="images/owen.webp" alt="owen">
+        <div class="dropdown-content">
+          <strong>Michael Owen</strong><br>Ballondor winner 2003
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="klopp">
+    <h2>Klopp Era (2015–Present)</h2>
+    <div class="gallery-container">
+      <div class="dropdown">
+        <img src="images/0_Klopp-PL-Trophy.webp" alt="Jürgen Klopp">
+        <div class="dropdown-content">
+          <strong>Jürgen Klopp</strong><br>Brought the glory back with Champions League & Premier League.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/mohamed-salah.webp" alt="Mohamed Salah">
+        <div class="dropdown-content">
+          <strong>Mohamed Salah</strong><br>The greatest player for liverpool of all time .Record-breaker and talismanic winger.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/virgil.webp" alt="Virgil van Dijk">
+        <div class="dropdown-content">
+          <strong>Virgil van Dijk</strong><br>Colossus at the back.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/trent.avif" alt="trent">
+        <div class="dropdown-content">
+          <strong>Trent Alexander Arnold</strong><br>Greatest Right back for liverpool
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/firmino.jpeg" alt="firmino">
+        <div class="dropdown-content">
+          <strong>Roberto Firmino</strong><br>without him treble 2019-20 is impossible
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/jordan.webp" alt="Henderson">
+        <div class="dropdown-content">
+          <strong>Jordan Henderson</strong><br>The captain liverpool
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/sadiomane.webp" alt="mane">
+        <div class="dropdown-content">
+          <strong>Sadio Mane</strong><br>One of the greatest forward played for liverpool
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/alisson.webp" alt="alisson">
+        <div class="dropdown-content">
+          <strong>Alisson Becker</strong><br>one of the greatest goalkeeper in his era.
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/robertson.jpg" alt="robertson">
+        <div class="dropdown-content">
+          <strong>Robertson</strong><br>The wolverine.Angrybeast one the greatest left back for liverpool
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/james-milner.webp" alt="milner">
+        <div class="dropdown-content">
+          <strong>James Milner</strong><br>The Tank.Super Human
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="images/jotalastpl.webp" alt="jota">
+        <div class="dropdown-content">
+          <strong>Diogo Jota</strong><br>one of the best to play for liverpool forever 20
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+     You'll Never Walk Alone.
+  </footer>
+</body>
+</html>

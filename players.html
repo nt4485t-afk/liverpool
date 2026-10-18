@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVE Players</title>
+    <link rel="icon" type="image/x-icon" href="images/liverpoolprofile-modified.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgb(183, 34, 34);
+            color: white;
+        }
+
+        header {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1, header h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            padding: 20px 40px;
+            margin: 0;
+            display: inline-block;
+            
+            line-height: 2cm;
+            text-decoration: underline;
+        }
+        h1{
+            color: #b3001b;
+            
+        }
+        h2{
+            color: #ffa6a6;
+            text-shadow: 0px 0px 30px black;
+        }
+
+        section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 10px;
+}
+
+        article {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+}
+article > h2 {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width:  100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 1;
+        }
+
+        .gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+}
+.card {
+  flex: 1 1 250px;
+  max-width: 250px;
+  height: auto;
+  min-height: 400px;
+}
+
+        .card {
+            width: 250px;
+            height: 400px;
+            background: linear-gradient(60deg, #000, crimson, #000, gold, gold);
+            background-size: 300% 300%;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0px 0px 5px 3px rgb(224, 196, 37);
+            border: 3px solid gold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            animation: pl 7s linear infinite;
+        }
+
+        @keyframes pl {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 10px 0;
+        }
+
+        .card strong {
+            font-size: 1.2em;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .jersey-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 38px;
+  height: 38px;
+  background: radial-gradient(circle, gold, rgb(212, 212, 145));
+  color: black;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.9), 0 0 24px rgba(32, 27, 27, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial Black', Gadget, sans-serif;
+  z-index: 2;
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px gold, 0 0 20px crimson;
+  }
+  50% {
+    box-shadow: 0 0 20px gold, 0 0 40px crimson;
+  }
+}
+
+        footer {
+            padding: 60px;
+            text-align: center;
+            background-color: #741111;
+            color: white;
+            font-style: italic;
+        }
+
+        @media (max-width: 1024px) {
+            header h1, header h2 {
+                font-size: 2em;
+                padding: 15px 30px;
+            }
+
+            .card {
+                width: 200px;
+                height: 350px;
+            }
+
+            .card strong {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1, header h2 {
+                font-size: 1.5em;
+                padding: 10px 20px;
+            }
+
+            .gallery-container {
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .card {
+                width: 45%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1, header h2 {
+                font-size: 1.2em;
+                padding: 8px 16px;
+            }
+
+            .card {
+                width: 90%;
+                height: auto;
+            }
+
+            .card img {
+                height: auto;
+            }
+        }
+        @media (max-width: 768px) {
+  .card {
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 90%;
+    max-width: 90%;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <img src="images/wp10269341-liverpool-stadium-wallpapers.jpg" class="bg-image">
+    <header>
+        <h1>LIVERPOOL ACTIVE SQUAD</h1>
+    </header>
+    <section>
+      <article>
+        <div>
+        <header>
+  <h2>FOREVER RED</h2> 
+  </header>
+  <div class="gallery-container">
+    <div class="card" >
+        <div class="jersey-number">20</div>
+      <img src="images/jotalastpl-removebg-preview.png" alt="Diogo Jota" style="filter: grayscale(70%) brightness(80%);">
+      <strong style="font-size: 1.5em; color: gold;">Diogo Jota</strong>
+      <p style="font-style: italic; font-size: 0.9em; color: white; margin-top: 5px;">"Once a Red, forever feared.</p>
+      <p style="font-style: italic; font-size: 0.9em; color: white; margin-top: 5px;">"1996-2025"</p>
+
+    </div>
+  </div>   
+  
+</article>
+  
+        <article>
+        <header><h2>SQUAD STAFF</h2></header>
+        <div class="gallery-container">
+
+    <div class="card"><img src="images/arne-slot-staff-profile-body-shot-19062024.png" alt="Arne Slot"><strong>Arne Slot</strong><br><em>Head Coach</em></div>
+    <div class="card"><img src="images/sipke-removebg-preview.png" alt="Sipke Hulshoff"><strong>Sipke Hulshoff</strong><br><em>First Assistant Coach</em></div>
+    <div class="card"><img src="images/vanbron-removebg-preview.png" alt="Giovanni van Bronckhorst"><strong>Giovanni van Bronckhorst</strong><br><em>Assistant Coach</em></div>
+    <div class="card"><img src="images/aaron-removebg-preview.png" alt="Aaron Briggs"><strong>Aaron Briggs</strong><br><em>Individual Development Coach</em></div>
+    <div class="card"><img src="images/xavivalero-removebg-preview.png" alt="Xavi Valero"><strong>Xavi Valero</strong><br><em>Head Goalkeeping Coach</em></div>
+    <div class="card"><img src="images/colin-stewart-removebg-preview.png" alt="Colin Stewart"><strong>Colin Stewart</strong><br><em>Goalkeeper Development & Pathway Lead</em></div>
+    <div class="card"><img src="images/conall-murtagh-headshot-202425-removebg-preview.png" alt="Dr Conall Murtagh"><strong>Dr Conall Murtagh</strong><br><em>Head of Physical Performance</em></div>
+    <div class="card"><img src="images/rubeen-removebg-preview.png" alt="Ruben Peeters"><strong>Ruben Peeters</strong><br><em>Lead Physical Performance Coach</em></div>
+    <div class="card"><img src="images/jonathan-power-headshot-202425-removebg-preview.png" alt="Jonathan Power"><strong>Jonathan Power</strong><br><em>Director of Medicine & Performance</em></div>
+    <div class="card"><img src="images/leenobes-removebg-preview.png" alt="Lee Nobes"><strong>Lee Nobes</strong><br><em>Head of Rehab Physiotherapy</em></div>
+    <div class="card"><img src="images/chrisblack-removebg-preview.png" alt="Chris Morgan"><strong>Chris Morgan</strong><br><em>Head of Performance Physical Therapy</em></div>
+    <div class="card"><img src="images/amit-pannu-removebg-preview.png" alt="Amit Pannu"><strong>Amit Pannu</strong><br><em>First-Team Doctor</em></div>
+    <div class="card"><img src="images/robin-sadler-v2-241024-removebg-preview.png" alt="Robin Sadler"><strong>Robin Sadler</strong><br><em>First‑Team Physiotherapist</em></div>
+    <div class="card"><img src="images/paul_small2006-removebg-preview.png" alt="Paul Small"><strong>Paul Small</strong><br><em>Masseur</em></div>
+    <div class="card"><img src="images/leeradcliffe-removebg-preview.png" alt="Lee Radcliffe"><strong>Lee Radcliffe</strong><br><em>Kit Operations Manager</em></div>
+    <div class="card"><img src="images/brendon-removebg-preview.png" alt="Brendan McIlduff"><strong>Brendan McIlduff</strong><br><em>Kit Co‑ordinator</em></div>
+    <div class="card"><img src="images/dave-rydings-headshot-202425-removebg-preview.png" alt="David Rydings"><strong>Dr David Rydings</strong><br><em>Rehabilitation Fitness Coach</em></div>
+    <div class="card"><img src="images/chrisblack-removebg-preview.png" alt="Chris Black"><strong>Chris Black</strong><br><em>Lead Strength & Conditioning Coach</em></div>
+    <div class="card"><img src="images/joelewis-removebg-preview.png" alt="Joe Lewis"><strong>Joe Lewis</strong><br><em>Physiotherapist (Rehab)</em></div>
+    <div class="card"><img src="images/clare-farell-headshot-031024-removebg-preview.png" alt="Clare Farrell"><strong>Clare Farrell</strong><br><em>Lead Performance Nutritionist</em></div>
+    <div class="card"><img src="images/lynsey-ahmed-staff-profile-oct-2024-removebg-preview.png" alt="Lynsey Ahmed"><strong>Lynsey Ahmed</strong><br><em>Health Care Assistant</em></div>
+    <div class="card"><img src="images/yinka-removebg-preview.png" alt="Yinka Ademuyiwa"><strong>Yinka Ademuyiwa</strong><br><em>Kit Assistant</em></div>
+    <div class="card"><img src="images/michelle-removebg-preview.png" alt="Michelle Hudson"><strong>Michelle Hudson</strong><br><em>Masseur</em></div>
+
+    </div>
+    </article>
+    
+        
+        <article>
+    <header><h2>GOALKEEPERS</h2></header>
+  <div class="gallery-container">
+    <!-- Goalkeepers -->
+    <div class="card">
+        <div class="jersey-number">1</div>
+        <img src="images/alissonremovebg-preview.png" alt="Alisson Becker"><strong>Alisson Becker</strong></div>
+    <div class="card">
+        <div class="jersey-number">56</div>
+        <img src="images/valencia-mamardashvili-removebg-preview.png" alt="Giorgi Mamardashvili"><strong>Giorgi Mamardashvili</strong></div>
+    <div class="card">
+        <div class="jersey-number">60</div>
+        <img src="images/armin-pecsi-removebg-preview.png" alt="Ármin Pécsi"><strong>Ármin Pécsi</strong></div>
+    <div class="card">
+        <div class="jersey-number">55</div>
+        <img src="images/woodman-removebg-preview.png" alt="Freddie Woodman"><strong>Freddie Woodman</strong></div>
+    </div>
+    
+    </article>
+
+    <!-- Defenders -->
+    
+        <article>
+    <header><h2>DEFENDERS</h2></header>
+     <div class="gallery-container">
+    <div class="card">
+        <div class="jersey-number">4</div>
+        <img src="images/vandijk-removebg-preview.png" alt="Virgil van Dijk"><strong>Virgil van Dijk</strong></div>
+    <div class="card">
+        <div class="jersey-number">2</div>
+        <img src="images/joe-gomez-liverpool-removebg-preview.png" alt="Joe Gomez"><strong>Joe Gomez</strong></div>
+    <div class="card">
+        <div class="jersey-number">5</div>
+        <img src="images/konate-removebg-preview.png" alt="Ibrahima Konaté"><strong>Ibrahima Konaté</strong></div>
+    <div class="card">
+        <div class="jersey-number">21</div>
+        <img src="images/KTsimikas2024.webp" alt="Kostas Tsimikas"><strong>Kostas Tsimikas</strong></div>
+    <div class="card">
+        <div class="jersey-number">22</div>
+        <img src="images/calvin-ramsay.png" alt="Calvin Ramsay"><strong>Calvin Ramsay</strong></div>
+    <div class="card">
+        <div class="jersey-number">26</div>
+        <img src="images/robertson-removebg-preview.png" alt="Andy Robertson"><strong>Andy Robertson</strong></div>
+    <div class="card">
+        <div class="jersey-number">46</div>
+        <img src="images/rhyswilliam.png" alt="Rhys Williams"><strong>Rhys Williams</strong></div>
+    <div class="card">
+        <div class="jersey-number">84</div>
+        <img src="images/conorbrad-removebg-preview.png" alt="Conor Bradley"><strong>Conor Bradley</strong></div>
+    <div class="card">
+        <div class="jersey-number">30</div>
+        <img src="images/jeremie-frimpong-removebg-preview.png" alt="Jeremie Frimpong"><strong>Jeremie Frimpong</strong></div>
+    <div class="card">
+        <div class="jersey-number">57</div>
+        <img src="images/kerkez--removebg-preview.png" alt="Milos Kerkez"><strong>Milos Kerkez</strong></div>
+     </div>
+     </article>
+    
+
+
+
+
+    <!-- Midfielders -->
+     
+        <article>
+    <header><h2>MIDFIELDERS</h2></header> 
+     <div class="gallery-container">
+    <div class="card">
+        <div class="jersey-number">3</div>
+        <img src="images/wataruendo-removebg-preview.png" alt="Wataru Endo"><strong>Wataru Endo</strong></div>
+    <div class="card">
+        <div class="jersey-number">8</div>
+        <img src="images/dominik-removebg-preview.png" alt="Dominik Szoboszlai"><strong>Dominik Szoboszlai</strong></div>
+    <div class="card">
+        <div class="jersey-number">10</div>
+        <img src="images/maccy-removebg-preview.png" alt="Alexis Mac Allister"><strong>Alexis Mac Allister</strong></div>
+    <div class="card">
+        <div class="jersey-number">17</div>
+        <img src="images/curtisjones-removebg-preview.png" alt="Curtis Jones"><strong>Curtis Jones</strong></div>
+    <div class="card">
+        <div class="jersey-number">19</div>
+        <img src="images/harvey-removebg-preview.png" alt="Harvey Elliott"><strong>Harvey Elliott</strong></div>
+    <div class="card">
+        <div class="jersey-number">38</div>
+        <img src="images/ryan-gravenberch.png" alt="Ryan Gravenberch"><strong>Ryan Gravenberch</strong></div>
+    <div class="card">
+        <div class="jersey-number">43</div>
+        <img src="images/stefan-removebg-preview.png" alt="Stefan Bajcetic"><strong>Stefan Bajcetic</strong></div>
+    <div class="card">
+        <div class="jersey-number">80</div>
+        <img src="images/tyler-morton-bodyshot-202425.png" alt="Tyler Morton"><strong>Tyler Morton</strong></div>
+    <div class="card">
+        <div class="jersey-number">98</div>
+        <img src="images/Trey-Nyoni-LFC-removebg-preview.png" alt="Trey Nyoni"><strong>Trey Nyoni</strong></div>
+
+        </div>
+        </article>
+        
+
+
+
+
+
+    <!-- Forwards -->
+    
+        <article>
+    <header><h2>FORWARDS</h2></header>   
+    <div class="gallery-container">
+    <div class="card">
+        <div class="jersey-number">11</div>
+        <img src="images/primesalah-removebg-preview.png" alt="Mohamed Salah"><strong>Mohamed Salah</strong></div>
+    <div class="card">
+        <div class="jersey-number">18</div>
+        <img src="images/cody-removebg-preview.png" alt="Cody Gakpo"><strong>Cody Gakpo</strong></div>
+    <div class="card">
+        <div class="jersey-number">73</div>
+        <img src="images/rio-removebg-preview.png" alt="rio nhumpo"><strong>Rio Ngumoha</strong></div>
+    
+    <div class="card">
+        <div class="jersey-number">9</div>
+        <img src="images/newFile-removebg-preview.png" alt="Darwin Núñez"><strong>Darwin Núñez</strong></div>
+    <div class="card">
+        <div class="jersey-number">14</div>
+        <img src="images/cheisaLiverpool_Accrington-removebg-preview.png" alt="Federico Chiesa"><strong>Federico Chiesa</strong></div>
+    <div class="card">
+        <div class="jersey-number">50</div>
+        <img src="images/ben-doak-body-shot-2024-25.png" alt="Ben Doak"><strong>Ben Doak</strong></div>
+    <div class="card">
+        <div class="jersey-number">27</div>
+        <img src="images/florian-wirtz.webp" alt="Florian Wirtz"><strong>Florian Wirtz</strong></div>
+    <div class="card">
+        <div class="jersey-number">54</div>
+        <img src="images/hugo-removebg-preview.png" alt="Hugo ekitite"><strong>Hugo Ekitike</strong></div>
+
+    </div>
+    </article>
+    
+
+     
+
+      
+    </section>
+
+
+    <footer>
+        “You’ll never walk alone...”
+    </footer>
+</body>
+</html>

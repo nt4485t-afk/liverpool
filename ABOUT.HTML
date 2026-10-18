@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+    <title>ABOUT US</title>
+    <link rel="icon" type="image/x-icon" href="images/liverpoolprofile-modified.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1"> 
+    <style>
+        body{
+            font-family:'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+        }
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+
+        }
+        header{
+            display: flex;
+            font-size: xx-large;
+            padding: 50px;
+            background-color: #741111;
+        }
+        header h1{
+            color: rgb(222, 203, 203);
+            margin: 50px;
+            text-shadow: 4px 15px 16px black, 0px 0px 10px rgb(94, 14, 14) ;
+            text-align: justify;
+            
+        }
+        header  img{
+            margin-left: 125px;
+            height: 270px;
+            width: 270px;
+            border:5px outset;
+            border-radius: 40px;
+            background-color: rgb(219, 180, 180);
+            box-shadow: 10px 20px 10px  black;
+            transition: width 1s ,height 1s;
+        }
+        header img:hover{
+          height: 300px;
+          width: 300px;
+        }
+
+        span{
+            font-size: 25px;
+            color: white;
+            font-style: italic;
+           text-shadow: 4px 4px 4px black;
+            
+        }
+
+        section{
+            background-color: #c1dea7;
+            display: flex;
+            min-height: 1000px;
+            padding:100px;
+            margin: 0px;
+            background-image: url(images/Anfield\ Aesthetic.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:cover;
+                
+                
+        }
+
+
+         nav{
+            flex: 1;
+            display: flex;
+            flex-direction: vertical;
+            background-color: #741111;
+            padding: 0px;
+            gap: 0px;
+            position: sticky;
+            top:0px;
+            height: fit-content;
+            
+        }
+        /*nav a{
+            margin-right: 100px;
+            font-size: 16px;
+            display: inline-block;
+            text-align: center;
+            padding: 30px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            color:white;
+        } */
+        
+
+
+        
+
+        nav a:hover{
+            background-color: #da8c06;
+            font-size: 110%;
+        } 
+        .dropbtn {
+            background-color: #741111;
+            color: white;
+            padding: 16px;
+            font-size: larger;
+            border: none;
+            cursor: pointer;
+            position: sticky;
+        }  
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            } 
+
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #741111;
+            min-width: 200px; 
+            max-width: 250px; 
+            box-shadow: 8px 8px 16px 16px rgba(0,0,0,0.2); 
+            z-index: 1; 
+            border-radius: 20px;
+            
+            
+            }
+            .dropdown-content  ul li{
+                margin-left: 30px;
+                list-style-type: square;   
+                color:gold;
+              
+            }
+    
+            .dropdown-content a {
+                color: rgb(241, 231, 231);
+                padding: 25px ;
+                text-decoration: none;
+                display: block;
+                
+            }
+            .dropdown-content a:hover {
+                background-color: #ea9595;
+                border-radius: 30px;
+                
+            }
+
+                .dropdown:hover .dropdown-content {
+                display: block;
+                
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #7a0b0b;
+                border-radius: 30px;
+                }
+
+        article{
+            flex:4;
+           background-color: #8b0e0a;
+            padding: 40px;
+            margin: 30px;
+            line-height: 1.5;
+        }
+        article h1{
+            font-size: clamp(1rem, 2.5vw, 2rem);
+            color: white;
+            line-height: 3cm;
+            /* border-bottom: 7px solid black; */
+            text-shadow: 2px 3px 6px black , 2px 2px 4px rgb(109, 104, 14);
+            border-left: 10px solid rgb(217, 151, 30);
+            border-top:7px solid rgb(217, 151, 30);
+            border-right: 10px solid  rgb(217, 151, 30);
+            border-top-left-radius: 10px;
+            /* border-bottom-left-radius: 10px; */
+            /* border-bottom-right-radius: 10px; */
+             border-top-right-radius: 10px; 
+            /* border-style: outset;  */
+        }
+        article h1 :hover{
+              font-size:120%;
+            color: gold;     
+        }
+
+            .p1, .p2, .p3, .p4 {
+                font-size: clamp(1rem, 2.5vw, 2rem);
+                color:white;
+                margin-bottom: 50px;
+                text-align: center;
+                text-shadow: 5px 5px 5px black ;
+            }
+            .p1,.p2,.p3,.p4 {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  transition: width 2s, height 2s;
+}
+
+
+.klopp-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.65;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.klopp-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px); 
+}
+
+
+
+.tragedy-bg{
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.65;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.tragedy-bg img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px); 
+  object-position: top;
+
+}
+
+.ucl2005-bg{
+      position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.65;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.ucl2005-bg img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px);
+}
+
+.golden-bg{
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.65;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.golden-bg img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px);
+  object-position: top;
+}
+        
+         mention{
+            text-shadow: 7px 0px 4px black;
+            text-decoration: underline;
+         }  
+         
+         
+        .trophy{
+            vertical-align: middle;
+        }
+        
+       
+
+        footer{
+            background-color: #831f1f;
+            color: white;
+            font-size: large;
+            text-align: center;
+            padding: 70px;
+        }
+
+        @media (max-width: 768px) {
+      section {
+        flex-direction:column;
+      }
+    }
+    @media (max-width: 600px) {
+  header {
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+header img {
+  width: 120px;
+  height: 120px;
+  margin: 10px 0;
+}
+}
+    @media (max-width:600px){
+        nav{
+            flex-direction: column;
+            
+        }
+    }
+    @media (max-width: 600px) {
+  article p {
+    font-size: 1rem;
+    text-indent: 20px;
+    margin-left: 10px;
+    min-height: auto;
+    background-size: contain;
+  }
+}
+@media (max-width: 600px) {
+  header img {
+    width: 120px;
+    height: 120px;
+    margin-left: 0;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40 20px;
+}
+@media (max-width: 600px) {
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .dropbtn {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:600px){
+        footer{
+            flex-direction: column;
+            
+        }
+    }
+    </style>
+    <body>
+        <header>
+            <h1><mention>LIVERPOOL LEGACY</mention><br>
+            <span><q>---you'll never walk alone</q></h1></span>  <img src="images/liverpoolcrest.png" alt="liverpoolcrest">
+            
+        
+        </header>
+        <nav>
+
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn">MENU</button>
+            <div class="dropdown-content" style="left:0;">
+            <ul>
+                <li><a href="#p1">GOLDEN ERA</a></li> 
+                <li><a href="#p2">DROUGHT</a></li>
+                <li><a href="#p3">COMEBACK</a></li>
+                <li> <a href="#p4">REMEMBRANCE</a></li>   
+            
+            
+            
+           
+             </ul>
+            </div>
+        </div>
+        </nav>
+        <section>
+           
+            
+       
+            <article class="container">
+
+               <div id="p1" class="p1"> 
+            <h1><strong>The Golden Era (1960s–1989)</strong></h1><br>
+            <div class="golden-bg">
+                <img src="images/bob-paisley.avif" alt="golden">
+                </div>
+            From the clatter of Anfield’s old wooden stands rose a dynasty—born under <mention>Bill Shankly</mention>, sharpened by <mention>Bob Paisley</mention>, and crowned by <mention>Kenny Dalglish</mention>.
+            Paisley’s record is immortal: 6 league titles, 3 European Cups, 3 League Cups, and a calm hand that never missed.
+            The '80s roared with dominance—<mention>Joe Fagan’s</mention> treble in 1984, Dalglish's reign of class and control, and a team that ruled with grace and fire.
+            By 1990, Liverpool stood atop English football with 18<span class="trophy"><img src="images/pl.png" height="45px" width="55px" alt="trophy"></span>league titles, 4 <span class="trophy"><img src="images/champions-leagueiconremovebg.png" height="45px" width="55px" alt="trophy"></span>European Cups, 2 UEFA Cups, 5<span class="trophy"><img src="images/eflcup.png" height="45px" width="55px" alt="trophy"></span> League Cups, and 4 <span class="trophy"><img src="images/FA-Cup-Budweiser-removebg-preview.png" height="45px" width="60px" alt="trophy"></span>FA Cups—unmatched, untouchable.
+            Anfield was more than a ground—it was where greatness was routine.<br>
+               </div>
+              
+
+
+            <div id="p2" class="p2">
+              <h1>  <strong>The Years of Waiting (1990–2015)</strong></h1><br>
+              <div class="ucl2005-bg">
+                <img src="images/ucl2005rafa.jpeg" alt="ucl">
+                </div>
+            But empires crumble, even red ones. After 1990, the league crown slipped away like smoke in the cold.
+            The faithful waited while <mention>Graeme Souness</mention>, <mention>Roy Evans</mention>, <mention>Houllier</mention>, and <mention>Benítez</mention> each tried to awaken the giant.
+            There were sparks—the 2001 treble under Houllier (FA Cup, League Cup, UEFA Cup), and the miracle of Istanbul in 2005 under Benítez—Champions League No. 5.
+            <mention>Steven Gerrard</mention> became the heart of a city—joined by <mention>Torres</mention>, <mention>Suárez</mention>, <mention>Alonso</mention>, yet still no Premier League.
+            Trophies came in bursts—FA Cup 2006, League Cups in 2003 and 2012—but the crown of England remained a dream.<br>
+            </div>
+
+
+            <div id="p3" class="p3">
+              <h1><strong>The Klopp Era and the Return to Glory (2015–Present)</strong></h1><br>
+              <div class="klopp-bg">
+                <img src="images/klopp.jpg" alt="Jurgen Klopp">
+                </div>
+
+            Then came <mention>Jürgen Klopp</mention>, with thunder in his chest and belief in his boots. He didn’t just rebuild—he revived.
+            The team of <mention>Salah</mention>, <mention>Mané</mention>, <mention>Firmino</mention>,<mention>Van Dijk</mention>,<mention> Alisson</mention>, and <mention>Trent alex</mention> stormed Europe and England with pressing, passion, and pride.
+            2019 brought the sixth European Cup, and then—after 30 years of agony—Liverpool won the Premier League in 2020, finishing 18 points clear.
+            The trophies kept coming: FA Cup (2022), League Cups (2022, 2024), UEFA Super Cup, FIFA Club World Cup.
+            Klopp's Liverpool wasn’t just brilliant—it was beloved. When he departed in 2024, he left a fortress behind.
+            Now under Arne Slot, a new chapter begins—but the standard remains: to win with heart, and walk with history.<br>
+          
+            </div>
+
+
+            <div  id="p4" class="p4">
+               <h1><strong>The Tragedies That Shaped the Soul</strong></h1><br>
+               <div class="tragedy-bg">
+                <img src="images/Untitled design.png" alt="tragic">
+                </div>
+            Yet Liverpool’s legacy isn’t just written in gold—it’s carved in sorrow.
+            <mention>Heysel (1985)</mention> turned a final into mourning—39 lives lost, a stain on Europe and a five-year exile for the club.
+            Then came <mention>Hillsborough (1989)—97 supporters</mention> crushed, victims of failure, not fate.
+            For decades, truth was buried, and the club carried that grief like a badge of honor—fighting for justice, never forgetting.
+            In 2025, tragedy struck again—<mention>Diogo Jota</mention>, in the prime of his career, died in a car crash. Beloved by teammates, mourned by millions, his No. 20 was retired forever.
+            Liverpool doesn’t hide its scars. It wears them with pride. For in this club, the fallen walk with the living, and every chant, every anthem, echoes their names.
+            </div>
+            </article>
+        </section>
+        <footer>
+            <p>
+            "This is Liverpool FC—a story of triumph, trials, and tears.
+            More than a football club. A living memory. A red tide that never stops.
+            <mention>You’ll Never Walk Alone."</mention></p>
+        </footer>
+    </body>
+</html>
